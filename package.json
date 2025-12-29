@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf .next",
+    "vercel-build": "npm run type-check && npm run build",
+    "postinstall": "npm run type-check"
   },
   "dependencies": {
     "@base-ui/react": "^1.0.0",
