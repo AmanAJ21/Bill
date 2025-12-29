@@ -1,7 +1,7 @@
 import Header from "@/components/navbar"
 import Footer from "@/components/footer"
 import FloatingLines from "@/components/floating-lines-background"
-import { CreateAccountForm } from "@/components/create-account-form"
+import { RegisterForm } from "@/components/create-account-form"
 
 export default function CreateAccountPage() {
     return (
@@ -58,7 +58,7 @@ export default function CreateAccountPage() {
                     </div>
                 </div>
                 <div className="flex flex-col items-center justify-center gap-4 p-6 md:p-10">
-                    <CreateAccountForm />
+                    <RegisterForm />
                 </div>
             </div>
             <Footer />

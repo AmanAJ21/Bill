@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import ThemeToggle from "@/components/theme-toggle-button"
@@ -19,14 +18,10 @@ export default function Navbar() {
                     {/* Logo and Brand - Left */}
                     <div className="flex items-center">
                         <Link href="/" className="flex items-center space-x-2">
-                            <Image
-                                src="/next.svg"
-                                width={100}
-                                height={24}
-                                alt="Logo"
-                                className="h-6 w-auto"
-                            />
-                            <span className="font-bold">Your App</span>
+                            <div className="w-6 h-6 bg-foreground rounded-sm flex items-center justify-center">
+                                <span className="text-background text-xs font-bold">UB</span>
+                            </div>
+                            <span className="font-bold">Universal Bill</span>
                         </Link>
                     </div>
 
@@ -34,22 +29,22 @@ export default function Navbar() {
                     <div className="hidden md:flex items-center justify-center flex-1">
                         <nav className="flex items-center space-x-8 text-sm font-medium">
                             <Link
-                                href="/docs"
+                                href="/Features"
                                 className="transition-colors hover:text-foreground/80 text-foreground/60"
                             >
-                                Docs
+                                Features
                             </Link>
                             <Link
-                                href="/components"
+                                href="/Pricing"
                                 className="transition-colors hover:text-foreground/80 text-foreground/60"
                             >
-                                Components
+                                Pricing
                             </Link>
                             <Link
-                                href="/examples"
+                                href="/About"
                                 className="transition-colors hover:text-foreground/80 text-foreground/60"
                             >
-                                Examples
+                                About
                             </Link>
                         </nav>
                     </div>
@@ -138,37 +133,37 @@ export default function Navbar() {
                             {/* Mobile Navigation Links */}
                             <nav className="flex flex-col space-y-4">
                                 <Link
-                                    href="/docs"
+                                    href="/Features"
                                     className="text-lg font-medium transition-colors hover:text-foreground/80 text-foreground/60 py-3 border-b border-border/20"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
-                                    Docs
+                                    Features
                                 </Link>
                                 <Link
-                                    href="/components"
+                                    href="/Pricing"
                                     className="text-lg font-medium transition-colors hover:text-foreground/80 text-foreground/60 py-3 border-b border-border/20"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
-                                    Components
+                                    Pricing
                                 </Link>
                                 <Link
-                                    href="/examples"
+                                    href="/About"
                                     className="text-lg font-medium transition-colors hover:text-foreground/80 text-foreground/60 py-3 border-b border-border/20"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
-                                    Examples
+                                    About
                                 </Link>
                             </nav>
                             
                             {/* Mobile Action Buttons */}
                             <div className="flex flex-col space-y-3 pt-4">
                                 <Button variant="outline" size="lg" asChild className="justify-center">
-                                    <Link href="/login" onClick={() => setIsMobileMenuOpen(false)}>
+                                    <Link href="/Login" onClick={() => setIsMobileMenuOpen(false)}>
                                         Login
                                     </Link>
                                 </Button>
                                 <Button size="lg" asChild className="justify-center">
-                                    <Link href="/signup" onClick={() => setIsMobileMenuOpen(false)}>
+                                    <Link href="/CreateAccount" onClick={() => setIsMobileMenuOpen(false)}>
                                         Get Started
                                     </Link>
                                 </Button>
